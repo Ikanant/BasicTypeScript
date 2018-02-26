@@ -52,6 +52,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="Scripts\02-02-timer.ts" />
+    <TypeScriptCompile Include="Scripts\02-03-dynamic-types.ts" />
     <TypeScriptCompile Include="Scripts\grammar.ts" />
   </ItemGroup>
   <PropertyGroup>
