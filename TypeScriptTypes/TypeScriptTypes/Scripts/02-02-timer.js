@@ -10,7 +10,7 @@ startTimer = function () {
 // Update the screen with the timer data
 displayTimer = function () {
     document.getElementById('milliseconds').innerHTML = ms.toString();
-    document.getElementById('seconds').innerHTML = second.toString();
+    document.getElementById('seconds').innerHTML = seconds.toString();
     document.getElementById('minutes').innerHTML = minutes.toString();
 }, 
 // Start counting
@@ -25,7 +25,7 @@ turnTimerOn = function () {
         seconds = 0;
         minutes += 1;
     }
-    displayTimer(true);
+    displayTimer();
 }, 
 // Pause the timer
 pauseTimer = function () {
@@ -51,6 +51,6 @@ init = function (startButton, pauseButton, clearButton) {
     displayTimer();
 };
 window.onload = function () {
-    init('startButton', 'pauseButton');
+    init('startButton', 'pauseButton', 'clearButton');
 };
 //# sourceMappingURL=02-02-timer.js.map

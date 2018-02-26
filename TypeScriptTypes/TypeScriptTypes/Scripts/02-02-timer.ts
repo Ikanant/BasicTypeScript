@@ -16,7 +16,7 @@ var
     // Update the screen with the timer data
     displayTimer = function () {
         document.getElementById('milliseconds').innerHTML = ms.toString();
-        document.getElementById('seconds').innerHTML = second.toString();
+        document.getElementById('seconds').innerHTML =  seconds.toString();
         document.getElementById('minutes').innerHTML = minutes.toString();
     },
 
@@ -32,7 +32,7 @@ var
             seconds = 0;
             minutes += 1;
         }
-        displayTimer(true);
+        displayTimer();
     },
 
     // Pause the timer
@@ -51,7 +51,8 @@ var
     },
 
     // Bootstrap everything
-    init = function (startButton, pauseButton, clearButton) {
+    init: (s: string, p: string, c: string) => void
+        = function (startButton, pauseButton, clearButton) {
         document.getElementById(startButton).
             addEventListener("click", startTimer, false);
         document.getElementById(pauseButton).
@@ -62,5 +63,5 @@ var
     };
 
 window.onload = function () {
-    init('startButton', 'pauseButton');
+    init('startButton', 'pauseButton', 'clearButton');
 };
