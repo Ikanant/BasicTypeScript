@@ -1,4 +1,4 @@
-var Greeter = (function () {
+var Greeter = /** @class */ (function () {
     function Greeter(element) {
         this.element = element;
         this.element.innerText += "The time is: ";
@@ -14,7 +14,7 @@ var Greeter = (function () {
         clearTimeout(this.timerToken);
     };
     return Greeter;
-})();
+}());
 window.onload = function () {
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
